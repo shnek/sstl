@@ -22,6 +22,7 @@
                         <li role="presentation"><a href="setup.html">Setup </a></li>
                         <li class="active" role="presentation"><a href="#">Get a Game</a></li>
                         <li role="presentation"><a href="results.html">Results </a></li>
+                        <li role="presentation"><a href="" onclick="logout()">Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -45,19 +46,21 @@
     </div>
     <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
     <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyC5wdWpy0lC2z_ebs5fcp36S510m07-RzU",
-        authDomain: "sstl-6a30a.firebaseapp.com",
-        databaseURL: "https://sstl-6a30a.firebaseio.com",
-        projectId: "sstl-6a30a",
-        storageBucket: "sstl-6a30a.appspot.com",
-        messagingSenderId: "106877055189"
-      };
-      firebase.initializeApp(config);
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC5wdWpy0lC2z_ebs5fcp36S510m07-RzU",
+            authDomain: "sstl-6a30a.firebaseapp.com",
+            databaseURL: "https://sstl-6a30a.firebaseio.com",
+            projectId: "sstl-6a30a",
+            storageBucket: "sstl-6a30a.appspot.com",
+            messagingSenderId: "106877055189"
+        };
+        firebase.initializeApp(config);
     </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/logout.js"></script>
+
 </body>
 
 </html>

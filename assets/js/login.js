@@ -5,7 +5,8 @@ function login() {
     firebase.auth().signInWithEmailAndPassword(email, pass).catch(function (error) {
         var errorCode = error.code;
         var errorMessage = error.message;
-        window.alert(errorMessage);
+        console.err(error.code);
+        console.err(error.message);
     })
 }
 
@@ -14,6 +15,5 @@ firebase.auth().onAuthStateChanged(function (user) {
         console.log(user.email + " is logged in!");
         window.location.href = "results.html";
     } else {
-        window.alert("Logout successful!");
     }
 });
