@@ -19,7 +19,7 @@
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li role="presentation"><a href="login.html">Login </a></li>
-                        <li class="active" role="presentation"><a href="#">Register </a></li>
+                        <li class="active" role="presentation"><a href="register.html">Register </a></li>
                     </ul>
                 </div>
             </div>
@@ -31,18 +31,10 @@
                 <h1>Register to join SSTL</h1>
                 <div class="form-group">
                     <div class="col-sm-4 label-column">
-                        <label class="control-label" for="name-input-field">Name </label>
-                    </div>
-                    <div class="col-sm-6 input-column">
-                        <input class="form-control" type="text">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-4 label-column">
                         <label class="control-label" for="email-input-field">Email </label>
                     </div>
                     <div class="col-sm-6 input-column">
-                        <input class="form-control" type="email">
+                        <input class="form-control" id="email-container" type="email">
                     </div>
                 </div>
                 <div class="form-group">
@@ -50,7 +42,7 @@
                         <label class="control-label" for="pawssword-input-field">Password </label>
                     </div>
                     <div class="col-sm-6 input-column">
-                        <input class="form-control" type="password">
+                        <input class="form-control" id="password-container" type="password">
                     </div>
                 </div>
                 <div class="form-group">
@@ -58,15 +50,30 @@
                         <label class="control-label" for="repeat-pawssword-input-field">Repeat Password </label>
                     </div>
                     <div class="col-sm-6 input-column">
-                        <input class="form-control" type="password">
+                        <input class="form-control" id="password-check-container" type="password">
                     </div>
                 </div>
-                <button class="btn btn-default submit-button" type="button">Register </button>
+                <button class="btn btn-default submit-button" id="register-button" onclick="register()" type="button">Register </button>
             </form>
         </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC5wdWpy0lC2z_ebs5fcp36S510m07-RzU",
+            authDomain: "sstl-6a30a.firebaseapp.com",
+            databaseURL: "https://sstl-6a30a.firebaseio.com",
+            projectId: "sstl-6a30a",
+            storageBucket: "sstl-6a30a.appspot.com",
+            messagingSenderId: "106877055189"
+        };
+        firebase.initializeApp(config);
+    </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/register.js"></script>
 </body>
 
 </html>
