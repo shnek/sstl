@@ -1,0 +1,16 @@
+{
+    "courts": [
+    {
+        "id": 1,
+        "name": "Locus Lane"
+    },
+    {
+            "id": 2,
+            "name": "Shen High School East"
+        },
+        {
+            "id": 3,
+            "name": "Shen High School West"
+        }
+    ]
+}

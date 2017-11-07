@@ -7,6 +7,7 @@
     <title>SSTL</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="assets/css/setup-calendar.css">
 </head>
 
 <body>
@@ -32,10 +33,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <p>Name </p>
-                    <input type="text">
-                    <p>Courts (in order of preference):</p>
-                    <p>Availability: </p>
+                    <p>Name:</p>
+                    <input id="user-name" type="text">
+                    <p>Courts:</p>
+                    <p>Guide:</p>
+                    <div class="list-group">
+                        <li class="list-group-item list-group-item-success">Preferable</li>
+                        <li class="list-group-item list-group-item-info">Available</li>
+                        <li class="list-group-item list-group-item-danger">Unavailable</li>
+                    </div>
+                    <div class="list-group" id="court-list"></div>
+                    <p>Availability:</p>
+                    <div id="weekly-schedule"></div>
+                    <button onclick="submitSetup()">Save</button>
                 </div>
             </div>
         </div>
@@ -56,6 +66,9 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/logout.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="schedule/src/index.js"></script>
+    <script src="assets/js/setup.js"></script>
 
 </body>
 
