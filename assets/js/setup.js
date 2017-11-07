@@ -50,18 +50,21 @@ firebase.auth().onAuthStateChanged(function (user) {
             var kids = $("#court-list").children();
             for(i = 0; i < kids.length; i++){
                 if(data.preferable){
-                    data.preferable.foreach(court => {
-                        if(court == kids[i].innerText){
+                    for(j = 0; j < data.preferable.length; j++){
+                        if(data.preferable[j] == kids[i].innerText){
+                            preferableCourts.push(data.preferable[j]);
                             kids[i].classList.add("list-group-item-success");
                         }
-                    })
+
+                    }
                 }
                 if(data.available){
-                    data.available.foreach(court => {
-                        if(court == kids[i].innerText){
+                    for(j = 0; j < data.available.length; j++){
+                        if(data.available[j] == kids[i].innerText){
+                            availableCourts.push(data.available[j]);
                             kids[i].classList.add("list-group-item-info");
                         }
-                    })
+                    }
                 }
             }
 
