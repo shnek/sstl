@@ -10,6 +10,8 @@ function register() {
             var errorCode = error.code;
             var errorMessage = error.message;
             window.alert(errorMessage);
+        }).then(function(){
+            window.location.href = "login.html";
         })
     }
 }

@@ -32,16 +32,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <p>Opponent </p>
                     <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">Select opponent</button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="#">First Item</a></li>
-                            <li role="presentation"><a href="#">Second Item</a></li>
-                            <li role="presentation"><a href="#">Third Item</a></li>
-                        </ul>
+                        <label for="user-list">Select opponent:</label>
+                        <select class="form-control" id="user-list">
+                        <option>-</option>
+                        </select>
                     </div>
-                    <input type="date">
+                    <input id="game-date" type="date">
                 </div>
             </div>
         </div>
@@ -51,9 +48,9 @@
             <div class="row">
                 <div class="col-md-4 col-sm-4 col-sm-offset-1 col-xs-5">
                     <p>You </p>
-                    <input type="text" class="score-input">
-                    <input type="text" class="score-input">
-                    <input type="text" class="score-input">
+                    <input id="first-you" type="text" class="score-input">
+                    <input id="second-you" type="text" class="score-input">
+                    <input id="third-you" type="text" class="score-input">
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-2">
                     <p>vs </p>
@@ -62,15 +59,21 @@
                     <p> 3</p>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-5">
-                    <p>Paragraph</p>
-                    <input type="text" class="score-input">
-                    <input type="text" class="score-input">
-                    <input type="text" class="score-input">
+                    <p id="oponent-name">Oponent</p>
+                    <input id="first-op" type="text" class="score-input">
+                    <input id="second-op" type="text" class="score-input">
+                    <input id="third-op" type="text" class="score-input">
                 </div>
             </div>
         </div>
     </div>
-    <button class="btn btn-default" type="button">Submit </button>
+    <button class="btn btn-default" id="submit-score" type="button">Submit </button>
+    <p>Your games:</p>
+    <ul id="your-games">
+
+    </ul>
+
+
     <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
     <script>
         // Initialize Firebase
@@ -87,6 +90,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/logout.js"></script>
+    <script src="assets/js/submit.js"></script>
 
 </body>
 
